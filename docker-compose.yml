@@ -1,7 +1,5 @@
 version: '3.8'
-
 services:
-  # Backend FastAPI Service
   backend:
     build: ./backend
     volumes:
@@ -11,15 +9,15 @@ services:
     env_file:
       - ./backend/.env
 
-  # Frontend React Service
   frontend:
     build: ./frontend
     volumes:
-      # Map src directory for hot-reloading
-      - ./frontend/src:/app/frontend/src
-      - ./frontend/public:/app/frontend/public
+      - ./frontend:/app/frontend
+      - /app/frontend/node_modules
     ports:
-      # Default Create React App port is 3000
-      - "3000:80"
+      - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WDS_SOCKET_PORT=3000
     depends_on:
       - backend
