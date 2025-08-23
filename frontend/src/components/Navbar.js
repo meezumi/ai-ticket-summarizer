@@ -1,21 +1,24 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { SparklesIcon } from "@heroicons/react/24/solid"; 
+import { SparklesIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const linkStyle =
-    "text-gray-300 hover:text-cyan-400 transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium";
-  const activeLinkStyle = "text-white bg-gray-700";
+    "text-gray-400 hover:text-white transition-colors duration-300 px-3 py-2 rounded-md text-sm font-semibold";
+  const activeLinkStyle = "text-cyan-400";
 
   return (
-    <nav className="bg-gray-800/50 backdrop-blur-sm sticky top-0 z-50">
+    <nav className="bg-gray-900 border-b border-gray-800">
       <div className="container mx-auto px-4">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex items-center">
-            <NavLink to="/" className="flex-shrink-0 flex items-center gap-2">
-              <SparklesIcon className="h-8 w-8 text-cyan-400" />
-              <span className="text-white text-xl font-bold">
-                TicketVisor AI
+            <NavLink
+              to="/"
+              className="flex-shrink-0 flex items-center gap-2 group"
+            >
+              <SparklesIcon className="h-8 w-8 text-cyan-500 group-hover:text-cyan-400 transition-colors" />
+              <span className="text-white text-xl font-bold group-hover:text-gray-200 transition-colors">
+                TicketVisor
               </span>
             </NavLink>
           </div>
@@ -28,7 +31,22 @@ const Navbar = () => {
             >
               Analyzer
             </NavLink>
-            {/* Add more links here in the future */}
+            <NavLink
+              to="/history"
+              className={({ isActive }) =>
+                `${linkStyle} ${isActive ? activeLinkStyle : ""}`
+              }
+            >
+              History
+            </NavLink>
+            <NavLink
+              to="/analytics"
+              className={({ isActive }) =>
+                `${linkStyle} ${isActive ? activeLinkStyle : ""}`
+              }
+            >
+              Analytics
+            </NavLink>
           </div>
         </div>
       </div>
