@@ -8,12 +8,16 @@ import HistoryPage from './pages/HistoryPage';
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/app" element={<AppPage />} />
-        <Route path="/history" element={<HistoryPage />} />
-      </Routes>
+      <div className="bg-gray-900 min-h-screen">
+        <Navbar />
+        <main className="pt-16">
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/app" element={<AppPage />} />
+            <Route path="/history" element={<HistoryPage />} />
+          </Routes>
+        </main>
+      </div>
     </Router>
   );
 }
