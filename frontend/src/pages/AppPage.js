@@ -66,7 +66,7 @@ function AppPage() {
   return (
     <div className="bg-gray-900 text-white min-h-screen font-sans relative overflow-hidden">
       <BackgroundEffects />
-      
+
       <div className="relative pt-20">
         <motion.div
           initial={{ opacity: 0 }}
@@ -76,7 +76,7 @@ function AppPage() {
           className="container mx-auto p-4 md:p-8"
         >
           {/* Header */}
-          <motion.header 
+          <motion.header
             className="text-center mb-12"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -87,15 +87,16 @@ function AppPage() {
               className="text-4xl md:text-5xl font-bold mb-4"
             />
             <GradientText className="text-4xl md:text-5xl font-bold mb-4">
-              Powered by Intelligence
+              runs on bart-large-mnli model by Hugging Face
             </GradientText>
-            <motion.p 
+            <motion.p
               className="text-lg text-gray-400 mt-4 max-w-2xl mx-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              Instantly summarize and categorize customer support tickets with advanced AI.
+              Instantly summarize and categorize customer support tickets with
+              the help of AI.
             </motion.p>
           </motion.header>
 
@@ -118,7 +119,7 @@ function AppPage() {
                         📝
                       </motion.div>
                     </label>
-                    
+
                     <Textarea
                       rows={12}
                       placeholder="e.g., 'Hello, I'm having trouble logging into my account. I've tried resetting my password but I'm not receiving the email. This is really urgent as I need to access my billing information for an important client meeting tomorrow morning...'"
@@ -167,7 +168,7 @@ function AppPage() {
                       Analysis Complete
                     </h2>
                   </motion.div>
-                  
+
                   <div className="space-y-6">
                     {/* Category Result */}
                     <motion.div
@@ -179,7 +180,9 @@ function AppPage() {
                         🏷️ Suggested Category:
                       </h3>
                       <motion.div
-                        className={`inline-block px-6 py-3 rounded-2xl text-white font-semibold text-xl bg-gradient-to-r ${getCategoryColor(result.category)} shadow-lg`}
+                        className={`inline-block px-6 py-3 rounded-2xl text-white font-semibold text-xl bg-gradient-to-r ${getCategoryColor(
+                          result.category
+                        )} shadow-lg`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -197,7 +200,7 @@ function AppPage() {
                         🤖 AI-Generated Summary:
                       </h3>
                       <Card className="bg-gray-800/95 p-6">
-                        <motion.p 
+                        <motion.p
                           className="text-gray-100 leading-relaxed text-lg"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
