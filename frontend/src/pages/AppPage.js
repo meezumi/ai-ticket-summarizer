@@ -83,11 +83,11 @@ function AppPage() {
             transition={{ duration: 0.8 }}
           >
             <AnimatedText
-              text="AI Support Ticket Assistant"
+              text="Ticket Assistant"
               className="text-4xl md:text-5xl font-bold mb-4"
             />
             <GradientText className="text-4xl md:text-5xl font-bold mb-4">
-              runs on bart-large-mnli model by Hugging Face
+              runs on bart-large-mnli model
             </GradientText>
             <motion.p
               className="text-lg text-gray-400 mt-4 max-w-2xl mx-auto"
@@ -95,8 +95,7 @@ function AppPage() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              Instantly summarize and categorize customer support tickets with
-              the help of AI.
+              Instantly summarize and categorize customer support tickets.
             </motion.p>
           </motion.header>
 

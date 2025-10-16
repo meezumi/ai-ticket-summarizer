@@ -1,7 +1,6 @@
 # TicketVisor: AI-Powered Customer Support Ticket Assistant
 
-<!-- ![TicketVisor Demo](https://i.imgur.com/your-demo-gif-url.gif) 
-It is highly recommended to create a short GIF of your application and replace the URL above -->
+![alt text](savee.png)
 
 TicketVisor is a full-stack web application designed to showcase a modern, production-grade software architecture for solving a high-value business problem: the manual processing of customer support tickets. This application leverages AI models to automatically summarize and categorize incoming tickets, providing a powerful dashboard for analytics and historical review.
 
@@ -68,3 +67,23 @@ This project is fully containerized.
     *   **Backend (API):** [http://localhost:8000](http://localhost:8000) (You should see `{"status":"TicketVisor API is running"}`)
 
 ---
+
+
+### Ticket Analysis Interface
+![Ticket Analysis Interface](save2.png)
+
+The main application page features a modern, intuitive interface where support agents can paste customer support tickets for instant AI-powered analysis. The interface includes:
+- **Clean Input Area:** A spacious text field for entering or pasting customer ticket content
+- **Smart Analysis:** Real-time AI processing that generates concise summaries and automatically categorizes tickets
+- **Category Detection:** Automatic classification into categories like Technical Support, Billing, Bug Report, and more
+- **Modern UI:** Glass morphism design with smooth animations and gradients for an enhanced user experience
+
+### Ticket History & Analytics
+![Ticket History Dashboard](<Screenshot From 2025-10-16 21-48-03.png>)
+
+The history page provides a comprehensive view of all processed tickets with powerful analytics capabilities:
+- **Statistics Dashboard:** Key metrics displayed at a glance, including total tickets processed and category distribution
+- **Searchable History:** Full list of previously analyzed tickets with expandable cards
+- **Detailed Records:** Each ticket entry shows the original text, AI-generated summary, category classification, and timestamp
+- **Visual Analytics:** Category distribution charts help identify common support patterns and trends
+- **Persistent Storage:** All ticket data is saved to MongoDB for long-term tracking and analysis
